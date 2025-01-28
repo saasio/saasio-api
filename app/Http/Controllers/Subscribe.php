@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\View\View;
 use App\Models\Plans;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -35,7 +36,7 @@ class Subscribe extends Controller
         return view('subscribe.go', ['checkout' => $checkout, 'plan' => $plan]);
     }
 
-    public function mine(Request $request)
+    public function mine(Request $request): View
     {
         return view('subscribe.mine');
     }
