@@ -22,7 +22,7 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Gate::define('saas-admin', function (User $user) {
             return $user->id == 1; // 第一个注册的成为管理员
