@@ -59,6 +59,6 @@ Route::middleware(['auth:sanctum', 'verified', 'admin'])->get('/plans/create', f
     return view('plans.create');
 })->name('plans.create');
 
-Route::middleware(['auth:sanctum', 'verified', 'admin'])->get('/plans/modify/{plan_id}', function () {
+Route::middleware(['auth:sanctum', 'verified', 'admin'])->get('/plans/modify/{price_id}', function () {
     return view('plans.modify');
 })->name('plans.modify');

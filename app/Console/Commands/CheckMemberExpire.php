@@ -33,10 +33,8 @@ class CheckMemberExpire extends Command
 
     /**
      * Execute the console command.
-     *
-     * @return int
      */
-    public function handle()
+    public function handle(): int
     {
         if ($users = User::whereNotNull('do_instance_id')->where('subscription_expire_date', '<', date('Y-m-d'))->get()) {
             foreach ($users as $user) {

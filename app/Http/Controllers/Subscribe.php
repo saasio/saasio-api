@@ -6,6 +6,7 @@ use App\Models\Plans;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class Subscribe extends Controller
 {
@@ -35,7 +36,7 @@ class Subscribe extends Controller
         return view('subscribe.go', ['checkout' => $checkout, 'plan' => $plan]);
     }
 
-    public function mine(Request $request)
+    public function mine(Request $request): View
     {
         return view('subscribe.mine');
     }
